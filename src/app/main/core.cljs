@@ -12,6 +12,7 @@
                                  :frame false
                                  :webPreferences
                                  {:nodeIntegration true}})))
+  (.setAlwaysOnTop @main-window true "floating")
   ; Path is relative to the compiled js file (main.js in our case)
   (.loadURL ^js/electron.BrowserWindow @main-window (str "file://" js/__dirname "/public/index.html"))
   (.on ^js/electron.BrowserWindow @main-window "closed" #(reset! main-window nil)))
