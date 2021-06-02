@@ -101,7 +101,7 @@
         {:keys [:minutes :seconds]} (sec->min-sec cur-time)]
     [:div {:style (:root-div styles)}
      [:div {:style (:message styles)}
-      (gstr/format "Time is now: %02d:%02d" minutes seconds)]
+      (gstr/format "%02d:%02d" minutes seconds)]
      [:br]
      [:div {:style (:buttons styles)}
       (for [[on-click label] [[#(toggle-timer!) "Start/Stop"]
