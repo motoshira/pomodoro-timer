@@ -1,4 +1,8 @@
-.logos img {
-  width: 100px;
-  margin-left: 5px;
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    height: 400px;
+    width: 260px;
+    -webkit-app-region: drag;
 }
