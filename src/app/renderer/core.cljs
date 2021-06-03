@@ -63,8 +63,8 @@
 ;;;
 
 (defn- make-styles []
-  {:root-div (assoc {:height "400px"
-                     :width "260px"
+  {:root-div (assoc {:height "420px"
+                     :width "300px"
                      :display :flex
                      :flex-direction :column
                      :justify-content :center
