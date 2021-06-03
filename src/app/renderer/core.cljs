@@ -69,6 +69,7 @@
                      :flex-direction :column
                      :justify-content :center
                      :align-items :center
+                     :border-radius "2px"
                      :background "#000"
                      :color "#FFF"}
                     :opacity (if (or (zero? (get @db :time))
@@ -106,12 +107,12 @@
      [:div {:style (:buttons styles)}
       (for [[on-click label] [[#(toggle-timer!) "Start/Stop"]
                               [#(reset-timer!) "Reset"]]]
-        [:div {:key label
-               :href "#"
-               :on-click (fn [e]
-                           (.preventDefault e)
-                           (on-click))
-               :style (:button styles)}
+        [:a {:key label
+             :href "#"
+             :on-click (fn [e]
+                         (.preventDefault e)
+                         (on-click))
+             :style (:button styles)}
          [:p {:style (:button-label styles)}
           label]])]]))
 
