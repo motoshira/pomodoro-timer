@@ -107,12 +107,12 @@
      [:div {:style (:buttons styles)}
       (for [[on-click label] [[#(toggle-timer!) "Start/Stop"]
                               [#(reset-timer!) "Reset"]]]
-        [:a {:key label
-             :href "#"
-             :on-click (fn [e]
-                         (.preventDefault e)
-                         (on-click))
-             :style (:button styles)}
+        [:div {:key label
+               :href "#"
+               :on-click (fn [e]
+                           (.preventDefault e)
+                           (on-click))
+               :style (:button styles)}
          [:p {:style (:button-label styles)}
           label]])]]))
 
