@@ -4,6 +4,6 @@ body {
     }
     height: 400px;
     width: 260px;
-    background: transparent;
+    background: rgba(0,0,0,0);
     -webkit-app-region: drag;
 }
